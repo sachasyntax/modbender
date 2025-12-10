@@ -9,7 +9,7 @@ REQUIREMENTS
 INSTRUCTIONS 
 1. program start run the program on terminal: python3 modbender.py input.wav output.wav [options]
 
-2. load input file / set output file name input file “input.wav” is the 16-bit PCM WAV file that will be processed output file “output.wav” is the WAV file that will be created input file must be located in the script directory
+2. load input file / set output file name. input file “input.wav” is the 16-bit PCM WAV file that will be processed. output file “output.wav” is the WAV file that will be created input file must be located in the script directory
  
 4. parameters
 
