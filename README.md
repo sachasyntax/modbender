@@ -1,6 +1,11 @@
 # modbender
 modular databending processor combining XOR / LSB / byte-level &amp; sample-level markov redistribution
 
+REQUIREMENTS
+-- Python 3
+-- standard libraries: argparse, wave, numpy, collections, random, sys, os
+-- PCM 16-bit (mono/stereo) WAV input file(s)
+
 INSTRUCTIONS 
 1. program start run the program on terminal: python3 modbender.py input.wav output.wav [options]
 
@@ -40,6 +45,6 @@ INSTRUCTIONS
 
 --iterations (or -n) number of times the entire processing pipeline runs. 1 by default
 
---order defines the order in which the operations are pipelined. available values are: l - LSB  x - XOR m - sample-level Markov redistribution  b ---byte-level markov redistribution default order being “b l x m” example of a custom order: “l x m b”
+--order defines the order in which the operations are pipelined. available values are: "l" - LSB  "x" - XOR "m" - sample-level Markov redistribution "b" ---byte-level markov redistribution. default order being “b l x m”. example of a custom order: “l x m b”
 
 6. complete example python3 modbender.py input.wav output.wav --lsb y markov --xor y --patterns 0xAA 0xFF 0x0F 0x55 --markov y --bmarkov y --bwindow 4 --mwindow 1024 --xorwindow 1024 --markovorder 3 --bmarkovorder 2 --smooth 0.1 --rate 44100 --iterations 2 --order b l x m
